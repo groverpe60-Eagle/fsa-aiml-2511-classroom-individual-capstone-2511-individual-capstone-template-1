@@ -107,7 +107,7 @@ def make_classification_prediction(models, input_data):
 st.sidebar.title("Navigation")
 page = st.sidebar.radio(
     "Choose a model:",
-    ["🏠 Home", "📈 Regression Model", "🏷️ Classification Model"]
+    ["🏠 Home", "📈 Factors to Performance", "🏷️ Grade Prediction"]
 )
 
 st.sidebar.markdown("---")
@@ -233,8 +233,8 @@ elif page == "📈 Regression Model":
 # =============================================================================
 # CLASSIFICATION PAGE
 # =============================================================================
-elif page == "🏷️ Classification Model":
-    st.title("🏷️ Classification Prediction")
+elif page == "🏷️ Future Grade Prediction":
+    st.title("🏷️ Predict your Future Grade")
     st.write("Enter feature values to get a category prediction.")
 
     # Load models
