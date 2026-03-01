@@ -36,7 +36,7 @@ from pathlib import Path
 # =============================================================================
 # This must be the first Streamlit command!
 st.set_page_config(
-    page_title="ML Prediction App",  # TODO: Update with your project name
+    page_title="Factors to your Students Performance",  # TODO: Update with your project name
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -114,7 +114,7 @@ st.sidebar.markdown("---")
 st.sidebar.markdown("### About")
 st.sidebar.info(
     """
-    This app deploys machine learning models trained on [YOUR DATASET].
+    This app deploys machine learning models trained on Student Performance Factors.
 
     - **Regression**: Predicts [The Exam_Score]
     - **Classification**: Predicts [Performance_Level]
@@ -151,7 +151,7 @@ if page == "🏠 Home":
         """
         **Dataset:** [Student Performance Factors]
 
-        **Problem Statement:** [We are predicting student performance based on various factors such as study time, attendance, and previous grades. The regression model predicts the final grade, while the classification model categorizes students into performance levels (Low, Medium, High).]
+        **Problem Statement:** [We are predicting student performance based on various factors such as study time, total study time (with tutoring), attendance, and previous grades. The regression model predicts the final grade, while the classification model categorizes students into performance levels (Low, Medium, High).]
 
         **Models Used:**
         - Regression: [Linear Regression]
@@ -177,7 +177,7 @@ elif page == "📈 Regression Model":
         st.stop()
 
     # Get feature names
-    features = models['regression_features']
+    features = models['Factors to Students Performance']
 
     st.markdown("---")
     st.markdown("### Enter Feature Values")
@@ -185,8 +185,8 @@ elif page == "📈 Regression Model":
     # Create input fields for each feature
     # TODO: CUSTOMIZE THIS SECTION FOR YOUR FEATURES!
     # The example below creates number inputs, but you may need:
-    # - st.selectbox() for categorical features
-    # - st.slider() for bounded numerical features
+    #st.selectbox() for categorical features
+    #st.slider() for bounded numerical features
     # - Different default values and ranges
 
     # Create columns for better layout
@@ -203,7 +203,7 @@ elif page == "📈 Regression Model":
 
             input_values[feature] = st.number_input(
                 label=feature,
-                value=0.0,  # Default value - UPDATE THIS
+                value=0, 
                 help=f"Enter value for {feature}"
             )
 
@@ -222,6 +222,7 @@ elif page == "📈 Regression Model":
 
         # TODO: Add context to your prediction
         # st.write(f"This means... [interpretation]")
+        
 
         # Show input summary
         with st.expander("View Input Summary"):
@@ -295,9 +296,9 @@ elif page == "🏷️ Classification Model":
         # Display result with color coding
         # TODO: Customize colors based on your categories
         color_map = {
-            'Low': '🔴',
-            'Medium': '🟡',
-            'High': '🟢'
+            'Needs Support': '🔴',
+            'Average': '🟡',
+            'High Achieving': '🟢'
         }
         emoji = color_map.get(predicted_label, '🔵')
 
