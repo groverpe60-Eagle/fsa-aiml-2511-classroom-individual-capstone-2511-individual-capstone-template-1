@@ -431,7 +431,7 @@ Reach out to Abishek on Slack if you have any questions or get stuck!
 
 **Selected Features:** [Attendance, Previous Scores, ]
 
-**Best Regression Model:** [LInear Regression, R2= 0.69"]
+**Best Regression Model:** [LInear Regression, R2= 0.87"]
 
 **Best Classification Model:** [SVC Model, with 85% accuracy"]
 

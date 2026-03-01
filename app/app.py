@@ -177,10 +177,11 @@ elif page == "📈 Regression Model":
         st.stop()
 
     # Get feature names
-    features = models['Factors to Students Performance']
+    features = models['regression_features']
 
     st.markdown("---")
-    st.markdown("### Enter Feature Values")
+    st.markdown("")
+
 
     # Create input fields for each feature
     # TODO: CUSTOMIZE THIS SECTION FOR YOUR FEATURES!
@@ -286,7 +287,7 @@ elif page == "🏷️ Classification Model":
     st.markdown("---")
 
     # Prediction button
-    if st.button("🔮 Make Classification Prediction", type="primary"):
+    if st.button("🔮 Grade Prediction", type="primary"):
         # Create input dataframe
         input_df = pd.DataFrame([input_values])
 
@@ -296,9 +297,10 @@ elif page == "🏷️ Classification Model":
         # Display result with color coding
         # TODO: Customize colors based on your categories
         color_map = {
-            'Needs Support': '🔴',
+            'Needs Supports': '🔴',
+            'Below Average': '🟠',
             'Average': '🟡',
-            'High Achieving': '🟢'
+            'High Achiever': '🟢'
         }
         emoji = color_map.get(predicted_label, '🔵')
 
