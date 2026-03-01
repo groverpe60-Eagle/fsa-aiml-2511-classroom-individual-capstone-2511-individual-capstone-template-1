@@ -116,20 +116,20 @@ st.sidebar.info(
     """
     This app deploys machine learning models trained on [YOUR DATASET].
 
-    - **Regression**: Predicts [YOUR TARGET]
-    - **Classification**: Predicts [YOUR CATEGORIES]
+    - **Regression**: Predicts [The Exam_Score]
+    - **Classification**: Predicts [Performance_Level]
     """
 )
 # TODO: UPDATE YOUR NAME HERE! This shows visitors who built this app.
-st.sidebar.markdown("**Built by:** [YOUR NAME]")
-st.sidebar.markdown("[GitHub Repo](https://github.com/YOUR-USERNAME/YOUR-REPO)")
+st.sidebar.markdown("**Built by:** Kyle Grover")
+st.sidebar.markdown("https://github.com/groverpe60-Eagle/fsa-aiml-2511-classroom-individual-capstone-2511-individual-capstone-template-1/tree/main/app")
 
 
 # =============================================================================
 # HOME PAGE
 # =============================================================================
 if page == "🏠 Home":
-    st.title("🤖 Machine Learning Prediction App")
+    st.title("🤖 Factors to your Child's Performance")
     st.markdown("### Welcome!")
 
     st.write(
@@ -149,13 +149,13 @@ if page == "🏠 Home":
     st.markdown("### About This Project")
     st.write(
         """
-        **Dataset:** [Describe your dataset]
+        **Dataset:** [Student Performance Factors]
 
-        **Problem Statement:** [What are you predicting and why?]
+        **Problem Statement:** [We are predicting student performance based on various factors such as study time, attendance, and previous grades. The regression model predicts the final grade, while the classification model categorizes students into performance levels (Low, Medium, High).]
 
         **Models Used:**
-        - Regression: [Your regression model type]
-        - Classification: [Your classification model type]
+        - Regression: [Linear Regression]
+        - Classification: [SVC Model]
         """
     )
 

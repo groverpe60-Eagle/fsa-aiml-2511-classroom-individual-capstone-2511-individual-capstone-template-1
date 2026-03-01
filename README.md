@@ -421,27 +421,27 @@ Reach out to Abishek on Slack if you have any questions or get stuck!
 
 > **Important:** This section is the first thing visitors see when they land on your GitHub repo. This is your portfolio—make it professional and complete! Update this before your final submission.
 
-**Student Name:** [Your Name]
+**Student Name:** [Kyle Grover]
 
-**Dataset:** [Dataset name and source - include a link if from Kaggle]
+**Dataset:** Factors for Student Performance - [(https://www.kaggle.com/code/kylegrover/studentperformancefactors/edit?fromFork=1)]
 
-**Problem Statement:** [What are you trying to predict and why? Write 2-3 sentences explaining the value of this prediction.]
+**Problem Statement:** [We are trying to predict the factors related to student performance and how much each of those factors matter to the student getting a good exam score on the next class. ]
 
-**Target Variable:** [Column name - e.g., "price" or "salary"]
+**Target Variable:** [Exam_Score]
 
-**Selected Features:** [List the 4-8 features your final model uses]
+**Selected Features:** [Attendance, Previous Scores, ]
 
-**Best Regression Model:** [Model type and key metric - e.g., "Random Forest (R² = 0.82)"]
+**Best Regression Model:** [LInear Regression, R2= 0.69"]
 
-**Best Classification Model:** [Model type and key metric - e.g., "Gradient Boosting (Accuracy = 85%)"]
+**Best Classification Model:** [SVC Model, with 85% accuracy"]
 
-**Deployed App URL:** [Add your Streamlit Cloud URL once deployed]
+**Deployed App URL:** [(https://factorsstudentperformance.streamlit.app/)]
 
 ### Project Highlights
 
 [Write 2-3 bullet points about interesting findings or challenges you overcame. This helps employers understand your thought process!]
 
--
--
--
+- The key indicator to student performance was attendance and number of hours studied.
+- One of the interesting findings is that regardless of whether the school was public or private the results didn't effect the outcome very much. 
+- Another interesting finding is that parental and teacher quality did not have much of an impact on the overall target score.
 kyle_grover
