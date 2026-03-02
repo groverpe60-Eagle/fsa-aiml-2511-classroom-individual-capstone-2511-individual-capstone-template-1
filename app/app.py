@@ -116,8 +116,8 @@ st.sidebar.info(
     """
     This app deploys machine learning models trained on Student Performance Factors.
 
-    - **Regression**: Predicts [The Exam_Score]
-    - **Classification**: Predicts [Performance_Level]
+    - Regression: Predicts the Exam_Score
+    - Classification: Predicts performance level
     """
 )
 # TODO: UPDATE YOUR NAME HERE! This shows visitors who built this app.
@@ -137,8 +137,8 @@ if page == "🏠 Home":
         This application allows you to make predictions using trained machine learning models.
 
         **What you can do:**
-        - 📈 **Regression Model**: Predict a numerical value
-        - 🏷️ **Classification Model**: Predict a category
+        - 📈 Regression Model: Predicts the Exam_Score
+        - 🏷️ Classification Model: Predicts performance level
 
         Use the sidebar to navigate between different models.
         """
@@ -149,13 +149,13 @@ if page == "🏠 Home":
     st.markdown("### About This Project")
     st.write(
         """
-        **Dataset:** [Student Performance Factors]
+        Dataset: Student Performance Factors
 
-        **Problem Statement:** [We are predicting student performance based on various factors such as study time, total study time (with tutoring), attendance, and previous grades. The regression model predicts the final grade, while the classification model categorizes students into performance levels (Low, Medium, High).]
+        Problem Statement: We are predicting student performance based on various factors such as study time, total study time (with tutoring), attendance, and previous grades. The regression model predicts the final grade, while the classification model categorizes students into performance levels (Low, Medium, High).
 
-        **Models Used:**
-        - Regression: [Linear Regression]
-        - Classification: [SVC Model]
+        Models Used:
+        - Regression: Linear Regression
+        - Classification: SVC Model
         """
     )
 
@@ -166,9 +166,9 @@ if page == "🏠 Home":
 # =============================================================================
 # REGRESSION PAGE
 # =============================================================================
-elif page == "📈 Regression Model":
-    st.title("📈 Regression Prediction")
-    st.write("Enter feature values to get a numerical prediction.")
+elif page == "📈 Exam Score Prediction":
+    st.title("📈 Factors to your Child's Exam Score")
+    st.write("Enter features to predict the exam score.")
 
     # Load models
     models = load_models()
@@ -223,6 +223,7 @@ elif page == "📈 Regression Model":
 
         # TODO: Add context to your prediction
         # st.write(f"This means... [interpretation]")
+        st.write(f"Based on the input features, the model predicts that the student's exam score will be approximately {prediction:.2f}. This prediction can help identify areas where the student may need additional support or resources to improve their performance.")
         
 
         # Show input summary
@@ -235,7 +236,7 @@ elif page == "📈 Regression Model":
 # =============================================================================
 elif page == "🏷️ Future Grade Prediction":
     st.title("🏷️ Predict your Future Grade")
-    st.write("Enter feature values to get a category prediction.")
+    st.write("Enter features to determine your predicted grade category.")
 
     # Load models
     models = load_models()
@@ -308,6 +309,7 @@ elif page == "🏷️ Future Grade Prediction":
 
         # TODO: Add interpretation
         # st.write(f"This means... [interpretation]")
+        st.write(f"Based on the input features, the model predicts that the student falls into the '{predicted_label}' category, which indicates their performance level relative to their peers.")
 
         # Show input summary
         with st.expander("View Input Summary"):
@@ -321,7 +323,7 @@ st.markdown("---")
 st.markdown(
     """
     <div style='text-align: center; color: gray;'>
-        Built by [YOUR NAME] | Full Stack Academy AI & ML Bootcamp
+        Built by Kyle Grover | Full Stack Academy AI & ML Bootcamp
     </div>
     """,
     unsafe_allow_html=True
