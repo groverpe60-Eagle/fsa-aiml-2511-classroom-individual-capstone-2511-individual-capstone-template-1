@@ -166,7 +166,7 @@ if page == "🏠 Home":
 # =============================================================================
 # REGRESSION PAGE
 # =============================================================================
-elif page == "📈 Exam Score Prediction":
+elif page == "📈 Regression Model":
     st.title("📈 Factors to your Child's Exam Score")
     st.write("Enter features to predict the exam score.")
 
@@ -234,7 +234,7 @@ elif page == "📈 Exam Score Prediction":
 # =============================================================================
 # CLASSIFICATION PAGE
 # =============================================================================
-elif page == "🏷️ Future Grade Prediction":
+elif page == "🏷️ Classification":
     st.title("🏷️ Predict your Future Grade")
     st.write("Enter features to determine your predicted grade category.")
 
