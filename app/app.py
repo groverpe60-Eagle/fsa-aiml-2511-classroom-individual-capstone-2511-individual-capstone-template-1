@@ -280,7 +280,7 @@ elif page == "🏷️ Classification Model":
             # TODO: Customize each input based on your feature type and range
             input_values[feature] = st.number_input(
                 label=feature,
-                value=0.0,
+                value=0,
                 key=f"class_{feature}",  # Unique key for classification inputs
                 help=f"Enter value for {feature}"
             )
