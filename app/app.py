@@ -21,8 +21,8 @@ WHAT YOU NEED TO CUSTOMIZE:
     3. Update the model paths if you changed them
     4. Customize the styling if desired
 
-Author: [Your Name]  # <-- UPDATE THIS!
-Dataset: [Your Dataset]  # <-- UPDATE THIS!
+Author: Kyle Grover  
+Dataset: Factors to Student Performance 
 """
 
 import streamlit as st
@@ -107,7 +107,7 @@ def make_classification_prediction(models, input_data):
 st.sidebar.title("Navigation")
 page = st.sidebar.radio(
     "Choose a model:",
-    ["🏠 Home", "📈 Factors to Performance", "🏷️ Grade Prediction"]
+    ["🏠 Home", "📈 Regression Model", "🏷️ Classification Model"]
 )
 
 st.sidebar.markdown("---")
@@ -116,7 +116,7 @@ st.sidebar.info(
     """
     This app deploys machine learning models trained on Student Performance Factors.
 
-    - Regression: Predicts the Exam_Score
+    - Regression: Predicts the exam score
     - Classification: Predicts performance level
     """
 )
@@ -137,8 +137,8 @@ if page == "🏠 Home":
         This application allows you to make predictions using trained machine learning models.
 
         **What you can do:**
-        - 📈 Regression Model: Predicts the Exam_Score
-        - 🏷️ Classification Model: Predicts performance level
+        - 📈 **Regression Model**: Predicts the exam score
+        - 🏷️ **Classification Model**: Predicts performance level
 
         Use the sidebar to navigate between different models.
         """
