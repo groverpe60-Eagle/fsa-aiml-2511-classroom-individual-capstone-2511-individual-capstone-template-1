@@ -234,7 +234,7 @@ elif page == "📈 Regression Model":
 # =============================================================================
 # CLASSIFICATION PAGE
 # =============================================================================
-elif page == "🏷️ Classification":
+elif page == "🏷️ Classification Model":
     st.title("🏷️ Predict your Future Grade")
     st.write("Enter features to determine your predicted grade category.")
 
