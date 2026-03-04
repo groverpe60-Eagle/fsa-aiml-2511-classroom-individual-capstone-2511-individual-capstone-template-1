@@ -194,6 +194,51 @@ elif page == "📈 Regression Model":
     col1, col2 = st.columns(2)
 
     input_values = {}
+    
+    input_values['study_time'] = st.slider(
+        label='Study Time (hours per week)',
+        min_value=0,
+        max_value=40,
+        value=10
+    )
+    input_values['total_study_time'] = st.slider(
+        label='Total Study Time (hours per week with tutoring)',
+        min_value=0,
+        max_value=40,
+        value=15
+    )
+    input_values['attendance'] = st.slider(
+        label='Attendance (percentage)',
+        min_value=0,
+        max_value=100,
+        value=90
+    )
+    input_values['previous_grade'] = st.slider(
+        label='Previous Grade (0-100)',
+        min_value=0,
+        max_value=100,
+        value=75
+    )
+    input_values['sleep_hours'] = st.slider(
+        label='Sleep Hours (per night)',
+        min_value=-8,
+        max_value=12,
+        value=8
+    )
+    
+    input_values['physical_activity'] = st.slider(
+        label='Physical Activity (hours per week)',
+        min_value=0,
+        max_value=20,
+        value=5
+    )
+    
+    input_values['Study_Efficiency'] = st.slider(
+        label='Study Efficiency (0-10 scale)',
+        min_value=0,
+        max_value=10,
+        value=7
+    )
 
     for i, feature in enumerate(features):
         # Alternate between columns
@@ -267,6 +312,52 @@ elif page == "🏷️ Classification Model":
 
     st.markdown("---")
     st.markdown("### Enter Feature Values")
+    
+    input_values = {}
+    
+    input_values['study_time'] = st.slider(
+        label='Study Time (hours per week)',
+        min_value=0,
+        max_value=40,
+        value=10
+    )
+    input_values['total_study_time'] = st.slider(
+        label='Total Study Time (hours per week with tutoring)',
+        min_value=0,
+        max_value=40,
+        value=15
+    )
+    input_values['attendance'] = st.slider(
+        label='Attendance (percentage)',
+        min_value=0,    
+        max_value=100,
+        value=90
+    )
+    input_values['previous_grade'] = st.slider(
+        label='Previous Grade (0-100)',
+        min_value=0,
+        max_value=100,
+        value=75
+    )
+    input_values['sleep_hours'] = st.slider(
+        label='Sleep Hours (per night)',
+        min_value=-8,
+        max_value=12,
+        value=8
+    )
+    input_values['physical_activity'] = st.slider(
+        label='Physical Activity (hours per week)',
+        min_value=0,
+        max_value=20,
+        value=5
+    )
+    input_values['Study_Efficiency'] = st.slider(
+        label='Study Efficiency (0-10 scale)',
+        min_value=0,
+        max_value=10,
+        value=7
+    )
+    
 
     # Create input fields
     # TODO: CUSTOMIZE THIS SECTION FOR YOUR FEATURES!
