@@ -191,7 +191,7 @@ elif page == "📈 Regression Model":
     # - Different default values and ranges
 
     # Create columns for better layout
-    col1, col2 = st.columns(2)
+    #col1, col2 = st.columns(2)
 
     input_values = {}
     
