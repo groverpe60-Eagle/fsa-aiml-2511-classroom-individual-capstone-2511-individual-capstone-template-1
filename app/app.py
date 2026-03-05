@@ -241,19 +241,18 @@ elif page == "📈 Regression Model":
         value=7,
     )
 
-    for i, feature in enumerate(features):
+    #for i, feature in enumerate(features):
         # Alternate between columns
-        with col1 if i % 2 == 0 else col2:
+        #with col1 if i % 2 == 0 else col2:
             # TODO: Customize each input based on your feature type and range
             # Example: For a feature like 'bedrooms' you might use:
             # input_values[feature] = st.number_input(feature, min_value=0, max_value=10, value=3)
-            if feature not in input_values:  # Avoid overwriting already created sliders
-                input_values[feature] = st.number_input(
-                    label=feature,
-                    value=0,
-                    key=f"reg_{feature}",  # Unique key for regression inputs
-                    help=f"Enter value for {feature}"
-                )
+
+            #input_values[feature] = st.number_input(
+                #label=feature,
+                #value=0, 
+                #help=f"Enter value for {feature}"
+            #)
 
     st.markdown("---")
 
@@ -343,15 +342,15 @@ elif page == "🏷️ Classification Model":
     )
     input_values['sleep_hours'] = st.slider(
         label='Sleep Hours (per night)',
-        min_value=8
+        min_value=-8
         max_value=12,
-        value=8,
+        value=8
     )
     input_values['physical_activity'] = st.slider(
         label='Physical Activity (hours per week)',
         min_value=0,
         max_value=20,
-        value=5,
+        value=5
     )
     input_values['Study_Efficiency'] = st.slider(
         label='Study Efficiency (0-10 scale)',
@@ -366,16 +365,17 @@ elif page == "🏷️ Classification Model":
 
     col1, col2 = st.columns(2)
 
+    input_values = {}
 
-    for i, feature in enumerate(features):
-        with col1 if i % 2 == 0 else col2:
+    #for i, feature in enumerate(features):
+        #with col1 if i % 2 == 0 else col2:
             # TODO: Customize each input based on your feature type and range
-            input_values[feature] = st.number_input(
-                label=feature,
-                value=0,
-                key=f"class_{feature}",  # Unique key for classification inputs
-                help=f"Enter value for {feature}"
-            )
+            #input_values[feature] = st.number_input(
+                #label=feature,
+                #value=0,
+                #key=f"class_{feature}",  # Unique key for classification inputs
+                #help=f"Enter value for {feature}"
+            #)
 
     st.markdown("---")
 
