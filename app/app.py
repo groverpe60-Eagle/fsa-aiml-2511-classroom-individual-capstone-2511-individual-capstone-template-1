@@ -194,19 +194,57 @@ elif page == "📈 Regression Model":
     col1, col2 = st.columns(2)
 
     input_values = {}
+    
+    input_values['study_time'] = st.slider(
+        label='Study Time (hours per week)',
+        min_value=0
+        max_value=40
+        value=0,
+        help="Enter the number of hours spent studying per week"
+    )
+    
+    input_values['total_study_time'] = st.slider(
+        label='Total Study Time (hours per week with tutoring)',
+        value=0,
+        help="Enter the total number of hours spent studying per week, including tutoring"
+    )
+    
+    input_values['attendance'] = st.number_input(
+        label='Attendance (number of classes attended)',
+        value=0,
+        help="Enter the number of classes attended"
+    )
+    
+    input_values['previous_grade'] = st.number_input(
+        label='Previous Grade (percentage)',
+        value=0,
+        help="Enter the previous grade as a percentage (0-100)"
+    )
+    
+    input_values['physical_activity'] = st.number_input(
+        label='Physical Activity (hours per week)',
+        value=0,
+        help="Enter the number of hours spent on physical activity per week"
+    )
+    
+    input_values['sleep_hours'] = st.number_input(
+        label='Sleep Hours (hours per night)',
+        value=0,
+        help="Enter the average number of hours spent sleeping per night"
+    )
 
-    for i, feature in enumerate(features):
+#for i, feature in enumerate(features):
         # Alternate between columns
-        with col1 if i % 2 == 0 else col2:
+        #with col1 if i % 2 == 0 else col2:
             # TODO: Customize each input based on your feature type and range
             # Example: For a feature like 'bedrooms' you might use:
             # input_values[feature] = st.number_input(feature, min_value=0, max_value=10, value=3)
 
-            input_values[feature] = st.number_input(
-                label=feature,
-                value=0, 
-                help=f"Enter value for {feature}"
-            )
+            #input_values[feature] = st.number_input(
+                #label=feature,
+                #value=0, 
+                #help=f"Enter value for {feature}"
+            #)
 
     st.markdown("---")
 
@@ -274,7 +312,41 @@ elif page == "🏷️ Classification Model":
     col1, col2 = st.columns(2)
 
     input_values = {}
-
+    input_values['study_time'] = st.number_input(
+        label='Study Time (hours per week)',
+        value=0,
+        help="Enter the number of hours spent studying per week"
+    )
+    
+    input_values['total_study_time'] = st.number_input(
+        label='Total Study Time (hours per week with tutoring)',
+        value=0,
+        help="Enter the total number of hours spent studying per week, including tutoring"
+    )
+    
+    input_values['attendance'] = st.number_input(
+        label='Attendance (number of classes attended)',
+        value=0,
+        help="Enter the number of classes attended"
+    )
+    
+    input_values['previous_grade'] = st.number_input(
+        label='Previous Grade (percentage)',
+        value=0,
+        help="Enter the previous grade as a percentage (0-100)"
+    )
+    
+    input_values['physical_activity'] = st.number_input(
+        label='Physical Activity (hours per week)',
+        value=0,
+        help="Enter the number of hours spent on physical activity per week"
+    )
+    
+    input_values['sleep_hours'] = st.number_input(
+        label='Sleep Hours (hours per night)',
+        value=0,
+        help="Enter the average number of hours spent sleeping per night"
+    )
     for i, feature in enumerate(features):
         with col1 if i % 2 == 0 else col2:
             # TODO: Customize each input based on your feature type and range
