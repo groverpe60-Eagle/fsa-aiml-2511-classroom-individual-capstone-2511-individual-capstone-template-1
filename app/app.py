@@ -194,61 +194,7 @@ elif page == "📈 Regression Model":
     col1, col2 = st.columns(2)
 
     input_values = {}
-    
-    input_values['study_time'] = st.number_input(
-        label='Study Time (hours per week)',
-            min=0,
-            max= 40,
-        value=0,
-        help="Enter the number of hours spent studying per week"
-    )
-    
-    input_values['total_study_time'] = st.number_input(
-        label='Total Study Time (hours per week with tutoring)',
-        min=0,
-        max= 40,
-        value=0,
-        help="Enter the total number of hours spent studying per week, including tutoring"
-    )
-    
-    input_values['attendance'] = st.number_input(
-        label='Attendance (number of classes attended)',
-        min=0,
-        max=100,
-        value=0,
-        help="Enter the number of classes attended"
-    )
-    
-    input_values['previous_grade'] = st.number_input(
-        label='Previous Grade (percentage)',
-        max= 100,
-        min=0,
-        value=0,
-        help="Enter the previous grade as a percentage (0-100)"
-    )
-    
-    input_values['physical_activity'] = st.number_input(
-        label='Physical Activity (hours per week)',
-        max= 12,
-        min=0,
-        value=0,
-        help="Enter the number of hours spent on physical activity per week"
-    )
-    
-    input_values['sleep_hours'] = st.number_input(
-        label='Sleep Hours (hours per night)',
-        min=-8,
-        max=12,
-        value=0,
-        help="Enter the average number of hours spent sleeping per night"
-    )
-    
-    input_values['Study_Efficacy'] = st.number_input(
-        label='Study Efficacy (0-10)',
-        value=0,
-        help="Enter the study efficacy score (0-10)"
-    )
-    
+
     for i, feature in enumerate(features):
         # Alternate between columns
         with col1 if i % 2 == 0 else col2:
@@ -328,60 +274,7 @@ elif page == "🏷️ Classification Model":
     col1, col2 = st.columns(2)
 
     input_values = {}
-    input_values['study_time'] = st.number_input(
-        label='Study Time (hours per week)',
-            min=0,
-            max= 40,
-        value=0,
-        help="Enter the number of hours spent studying per week"
-    )
-    
-    input_values['total_study_time'] = st.number_input(
-        label='Total Study Time (hours per week with tutoring)',
-        min=0,
-        max= 40,
-        value=0,
-        help="Enter the total number of hours spent studying per week, including tutoring"
-    )
-    
-    input_values['attendance'] = st.number_input(
-        label='Attendance (number of classes attended)',
-        min=0,
-        max=100,
-        value=0,
-        help="Enter the number of classes attended"
-    )
-    
-    input_values['previous_grade'] = st.number_input(
-        label='Previous Grade (percentage)',
-        max= 100,
-        min=0,
-        value=0,
-        help="Enter the previous grade as a percentage (0-100)"
-    )
-    
-    input_values['physical_activity'] = st.number_input(
-        label='Physical Activity (hours per week)',
-        max= 12,
-        min=0,
-        value=0,
-        help="Enter the number of hours spent on physical activity per week"
-    )
-    
-    input_values['sleep_hours'] = st.number_input(
-        label='Sleep Hours (hours per night)',
-        min=-8,
-        max=12,
-        value=0,
-        help="Enter the average number of hours spent sleeping per night"
-    )
-    
-    input_values['Study_Efficacy'] = st.number_input(
-        label='Study Efficacy (0-10)',
-        value=0,
-        help="Enter the study efficacy score (0-10)"
-    )
-    
+
     for i, feature in enumerate(features):
         with col1 if i % 2 == 0 else col2:
             # TODO: Customize each input based on your feature type and range
