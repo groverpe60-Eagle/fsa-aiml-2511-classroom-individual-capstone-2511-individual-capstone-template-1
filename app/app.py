@@ -222,7 +222,7 @@ elif page == "📈 Regression Model":
     )
     input_values['sleep_hours'] = st.slider(
         label='Sleep Hours (per night)',
-        min_value=0,
+        min_value=-8,
         max_value=10,
         value=8,
     )
@@ -342,7 +342,7 @@ elif page == "🏷️ Classification Model":
     )
     input_values['sleep_hours'] = st.slider(
         label='Sleep Hours (per night)',
-        min_value=-8
+        min_value=-8,
         max_value=12,
         value=8
     )
