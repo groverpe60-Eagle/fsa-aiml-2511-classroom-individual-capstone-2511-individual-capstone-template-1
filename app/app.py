@@ -197,8 +197,8 @@ elif page == "📈 Regression Model":
     
     input_values['study_time'] = st.slider(
         label='Study Time (hours per week)',
-        min_value=0
-        max_value=40
+        min_value=0,
+        max_value=40,
         value=0,
         help="Enter the number of hours spent studying per week"
     )
